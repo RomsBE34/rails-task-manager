@@ -12,7 +12,7 @@
 
         <% @tasks.each do |task| %>
            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-           <%= link_to task.title, task_path(task) %> <br>
+           <%= link_to task.title, task_path(task) %> <%= link_to "delete", delete_path(task), method: :delete %> <br>
         <% end %>
     </div>
 
