@@ -12,9 +12,9 @@ class TasksController < ApplicationController
   end
 
   def create
-     @task = Task.new(task_params)
-     @task.save
-     redirect_to tasks_path(@tasks)
+    @task = Task.new(task_params)
+    @task.save
+    redirect_to tasks_path(@tasks)
   end
 
   def edit
