@@ -1,7 +1,21 @@
 
-<h1> My Tasks </h1>
 
-<% @tasks.each do |task| %>
-<input type="checkbox" name="task"> <%= task.title %> <br>
-<% end %>
+<header>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</header>
+
+<body>
+
+  <h1> My Tasks </h1>
+
+    <div class="form-check list">
+
+        <% @tasks.each do |task| %>
+           <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+           <%= link_to task.title, task_path(task) %> <br>
+        <% end %>
+    </div>
+
+  <a href="tasks/new"> Create a new task  </a>
+
 
